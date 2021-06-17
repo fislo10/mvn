@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.test.mvn</groupId>
+    <artifactId>mvntest</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+            <!--El scope sirve para indicar el alcance de nuestra dependencia y su transitividad. Hay 6 tipos
+             test: La dependencia es solo para testing que es una de las fases
+              de compilación con maven. JUnit es un claro ejemplo de esto.-->
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+            <!--en el tutorial usan libreria junit por debajo de 5, sin embargo
+             es mejor usar la 5 ya que podemos hacer uso de funciones lambda en los assert de junit con jupiter
+             https://www.youtube.com/watch?v=O5kvqVriJdk -->
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.0.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>
